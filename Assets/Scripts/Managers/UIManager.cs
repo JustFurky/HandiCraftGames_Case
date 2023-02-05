@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace CodeBase.Managers.UIManager
 {
@@ -23,6 +24,10 @@ namespace CodeBase.Managers.UIManager
         public void StartButton()
         {
             GameManager.Instance.UpdateGameState(GameState.EventOne);
+        }
+        public void RestartLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
